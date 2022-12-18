@@ -1,12 +1,15 @@
 * {
-    margin: 100;
+    margin: 0;
 
 }
 
 
 
 #canvas {
-    border: 2px solid #760000;
+
+    margin-top: 1px;
+
+
 
 }
 
@@ -91,7 +94,10 @@ ul li a:hover {
 
 
 #main-content {
-    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 7.5vh;
     width: 100vw;
     height: 80vh;
 
@@ -101,7 +107,7 @@ ul li a:hover {
 
 
 #footer {
-    position: fixed;
+    margin-top: 7px;
     margin-bottom: 0px;
     background-color: rgb(2, 2, 2);
     width: 100vw;
@@ -154,7 +160,8 @@ ul li a:hover {
 
 
     #main-content {
-        background-color: red;
+
+        margin-top: 10vh;
         width: 100vw;
         height: 80vh;
     }
@@ -216,7 +223,8 @@ ul li a:hover {
     }
 
     #main-content {
-        background-color: red;
+
+        margin-top: 10vh;
         width: 100vw;
         height: 80vh;
     }
@@ -249,7 +257,8 @@ ul li a:hover {
     }
 
     #main-content {
-        background-color: red;
+
+        margin-top: 10vh;
         width: 100vw;
         height: 80vh;
     }
@@ -281,7 +290,8 @@ ul li a:hover {
     }
 
     #main-content {
-        background-color: red;
+
+        margin-top: 10vh;
         width: 100vw;
         height: 80vh;
     }
