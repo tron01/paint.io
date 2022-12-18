@@ -36,6 +36,13 @@ window.addEventListener("load", () => {
     canvas.addEventListener("mousemove", draw);
 
 
+    canvas.addEventListener("touchstart", startPosition);
+    canvas.addEventListener("touchend", finshedPosition);
+    canvas.addEventListener("touchmove", draw);
+
+    canvas.addEventListener("dragstart", startPosition);
+    canvas.addEventListener("dragover", finshedPosition);
+    canvas.addEventListener("drop", draw);
 
     /*
            //shapes
