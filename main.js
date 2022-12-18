@@ -9,9 +9,10 @@ window.addEventListener("load", () => {
     //variables
     let painting = false;
 
-    function startPosition() {
+    function startPosition(e) {
         painting = true;
         console.log("startPosition");
+        draw(e);
     }
     function finshedPosition() {
         painting = false;
