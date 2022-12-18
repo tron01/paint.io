@@ -1,10 +1,19 @@
+
+
 window.addEventListener("load", () => {
     const canvas = document.querySelector("#canvas")
     const ctx = canvas.getContext("2d");
 
+
+    let box = document.querySelector('#main-content');
+    let width = box.offsetWidth;
+    let height = box.offsetHeight;
+    console.log(width);
+    console.log(height);
+
     //Resizing
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+    canvas.height = height;
+    canvas.width = width;
 
     //variables
     let painting = false;
