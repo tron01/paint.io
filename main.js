@@ -16,6 +16,7 @@ window.addEventListener("load", () => {
     function finshedPosition() {
         painting = false;
         console.log("finshedPosition");
+        ctx.beginPath();
     }
     function draw(e) {
         if (!painting) return;
