@@ -7,6 +7,8 @@ window.addEventListener("load", () => {
     canvas.width = window.innerWidth;
 
     //ctx.fillRect(40, 100, 200, 400)
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 5;
     ctx.strokeRect(40, 100, 200, 400)
 
 })
