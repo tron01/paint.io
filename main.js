@@ -17,7 +17,14 @@ window.addEventListener("load", () => {
         painting = false;
         console.log("finshedPosition");
     }
+    function draw(e) {
+        if (!painting) return;
+        ctx.lineWidth = 10;
+        ctx.lineCap = 'round';
+        ctx.lineTo(e.clientX, e.clientY);
+        ctx.stroke();
 
+    }
 
     //EventListeners
     canvas.addEventListener("mousedown", startPosition);
