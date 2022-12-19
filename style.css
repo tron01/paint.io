@@ -76,7 +76,7 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: black;
+    background-color: rgb(99, 89, 89);
 }
 
 .checkbtn {
