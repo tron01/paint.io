@@ -75,8 +75,12 @@ ul li a {
     color: rgb(207, 124, 124);
 }
 
-ul li a:hover {
-    background-color: rgb(99, 89, 89);
+
+
+.btn {
+    padding: 10px;
+    border-radius: 9px;
+    cursor: pointer;
 }
 
 .checkbtn {
