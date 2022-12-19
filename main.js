@@ -31,11 +31,16 @@ window.addEventListener("load", () => {
     function draw(e) {
         if (!painting) return;
         ctx.lineWidth = 10;
+
+        let rect = canvas.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        console.log("Coordinate x: " + x, "Coordinate y: " + y);
         ctx.lineCap = 'round';
-        ctx.lineTo(e.clientX, e.clientY);
+        ctx.lineTo(x, y);
         ctx.stroke();
         ctx.beginPath();
-        ctx.moveTo(e.clientX, e.clientY);
+        ctx.moveTo(x, y);
 
     }
 
