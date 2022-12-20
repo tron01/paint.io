@@ -1,4 +1,13 @@
 
+const canvas = document.querySelector("#canvas")
+const ctx = canvas.getContext("2d");
+
+
+function Clear_all() {
+    console.log("clicked");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+}
 
 window.addEventListener("load", () => {
     const canvas = document.querySelector("#canvas")
@@ -121,10 +130,5 @@ window.addEventListener("load", () => {
         ctx.stroke();
     
      */
-
-    function clear() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    }
 
 })
