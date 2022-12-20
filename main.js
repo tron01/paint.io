@@ -8,56 +8,99 @@ window.addEventListener("load", () => {
     let box = document.querySelector('#main-content');
     let width = box.offsetWidth;
     let height = box.offsetHeight;
-    console.log(width);
-    console.log(height);
-
     //Resizing
     canvas.height = height;
     canvas.width = width;
 
     //variables
     let painting = false;
+    //get current mouse position
+    function getMousePosition(canvas, e) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+        }
+    }
 
     function startPosition(e) {
         painting = true;
-        console.log("startPosition");
+        getMousePosition(canvas, e);
         draw(e);
     }
     function finshedPosition() {
         painting = false;
-        console.log("finshedPosition");
         ctx.beginPath();
     }
     function draw(e) {
         if (!painting) return;
         ctx.lineWidth = 10;
+        var currentPos = getMousePosition(canvas, e);
 
-        let rect = canvas.getBoundingClientRect();
-        let x = e.clientX - rect.left;
-        let y = e.clientY - rect.top;
-        console.log("Coordinate x: " + x, "Coordinate y: " + y);
+
+        console.log("Coordinate x: " + currentPos.x, "Coordinate y: " + currentPos.y);
         ctx.lineCap = 'round';
-        ctx.lineTo(x, y);
+        ctx.lineTo(currentPos.x, currentPos.y);
         ctx.stroke();
         ctx.beginPath();
-        ctx.moveTo(x, y);
+        ctx.moveTo(currentPos.x, currentPos.y);
 
     }
+
 
     //EventListeners
     canvas.addEventListener("mousedown", startPosition);
     canvas.addEventListener("mouseup", finshedPosition);
     canvas.addEventListener("mousemove", draw);
 
+    canvas.addEventListener("touchstart", function (e) {
+        let mousePos = getMousePosition(canvas, e);
+        var touch = e.touches[0];
+        var mouseEvent = new MouseEvent("mousedown", {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+        });
 
-    canvas.addEventListener("touchstart", startPosition);
-    canvas.addEventListener("touchend", finshedPosition);
-    canvas.addEventListener("touchmove", draw);
+        canvas.dispatchEvent(mouseEvent);
+    }, false);
 
-    canvas.addEventListener("dragstart", startPosition);
-    canvas.addEventListener("dragover", finshedPosition);
-    canvas.addEventListener("drop", draw);
+    canvas.addEventListener("touchend", function (e) {
+        var mouseEvent = new MouseEvent("mouseup", {});
 
+        canvas.dispatchEvent(mouseEvent);
+    }, false);
+
+
+    canvas.addEventListener("touchmove", function (e) {
+        var touch = e.touches[0];
+        var mouseEvent = new MouseEvent("mousemove", {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+        });
+
+        canvas.dispatchEvent(mouseEvent)
+    }, false);
+
+
+    //prevent scrolling when touch the canvas
+
+    canvas.addEventListener("touchstart", function (e) {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    canvas.addEventListener("touchend", function (e) {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    canvas.addEventListener("touchmove", function (e) {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+    }, { passive: false });
     /*
            //shapes
         ctx.fillRect(60, 50, 100, 400)
