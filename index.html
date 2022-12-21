@@ -26,21 +26,31 @@
                 <ul>
                     <li>
                         <label for="pen" id="penl">&nbsp;Pen</label>
-                        <select name="" id="pen">
-                            <option class="opt" value=""> pen 1</option>
-                            <option class="opt" value=""> pen 2</option>
-                            <option class="opt" value=""> pen 3</option>
+                        <select id="pen" onchange=" s_pen(value) ">
+                            <option selected class="opt" value="1"> pen 1</option>
+                            <option class="opt" value="2"> pen 2</option>
+                            <option class="opt" value="3"> pen 3</option>
+                            <option class="opt" value="4"> pen 4</option>
+                            <option class="opt" value="5"> pen 5</option>
+                            <option class="opt" value="6"> pen 6</option>
+                            <option class="opt" value="7"> pen 7</option>
+                            <option class="opt" value="8"> pen 8</option>
                         </select>
 
                     </li>
                     <li>
                         <label for="color" id="colorl">&nbsp;Color</label>
-                        <select name="" id="color">
-                            <option class="opt" value=""> color 1</option>
-                            <option class="opt" value=""> color 2</option>
-                            <option class="opt" value=""> color 3</option>
+                        <select id="color" onchange=" s_color(value) ">
+                            <option class="opt" value="1">black </option>
+                            <option class="opt" value="2">red</option>
+                            <option class="opt" value="3">blue</option>
+                            <option class="opt" value="4">green</option>
+                            <option class="opt" value="5">pink</option>
+                            <option class="opt" value="6">grey</option>
+                            <option class="opt" value="7">Olive</option>
+                            <option class="opt" value="8">Orange</option>
                         </select>
-                    <li><button class="btn" id="Eraser">&nbsp;Eraser</button></li>
+                    <li><button class="btn" id="Eraser" onclick="Er()">&nbsp;Eraser</button></li>
                     <li><button class="btn" id="Eraser" onclick="Clear_all()"> &nbsp;Clear all</button></li>
                 </ul>
             </div>

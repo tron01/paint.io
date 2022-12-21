@@ -8,6 +8,51 @@ function Clear_all() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 }
+function s_pen(i) {
+    console.log(i);
+    if (i == 1) {
+        ctx.lineWidth = 2;
+    } else if (i == 2) {
+        ctx.lineWidth = 10;
+    } else if (i == 3) {
+        ctx.lineWidth = 15;
+    } else if (i == 4) {
+        ctx.lineWidth = 20;
+    } else if (i == 5) {
+        ctx.lineWidth = 30;
+    } else if (i == 6) {
+        ctx.lineWidth = 40;
+    } else if (i == 7) {
+        ctx.lineWidth = 50;
+    } else if (i == 8) {
+        ctx.lineWidth = 80;
+    }
+}
+function Er() {
+    ctx.strokeStyle = "white";
+}
+
+function s_color(i) {
+    console.log(i);
+    if (i == 1) {
+        ctx.strokeStyle = "black";
+    } else if (i == 2) {
+        ctx.strokeStyle = "red";
+    } else if (i == 3) {
+        ctx.strokeStyle = "blue";
+    } else if (i == 4) {
+        ctx.strokeStyle = "green";
+    } else if (i == 5) {
+        ctx.strokeStyle = "pink";
+    } else if (i == 6) {
+        ctx.strokeStyle = "grey";
+    } else if (i == 7) {
+        ctx.strokeStyle = "#808000";
+    } else if (i == 8) {
+        ctx.strokeStyle = "#FFA500";
+    }
+}
+
 
 window.addEventListener("load", () => {
     const canvas = document.querySelector("#canvas")
@@ -41,11 +86,12 @@ window.addEventListener("load", () => {
         painting = false;
         ctx.beginPath();
     }
+
+
     function draw(e) {
         if (!painting) return;
-        ctx.lineWidth = 10;
-        var currentPos = getMousePosition(canvas, e);
 
+        var currentPos = getMousePosition(canvas, e);
 
         console.log("Coordinate x: " + currentPos.x, "Coordinate y: " + currentPos.y);
         ctx.lineCap = 'round';
