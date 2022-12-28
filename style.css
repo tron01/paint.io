@@ -16,6 +16,10 @@
     content: url('/images/color.png');
 }
 
+#b_color::before {
+    content: url('/images/color.png');
+}
+
 #pen {
     padding: 10px;
     border-radius: 9px;
@@ -25,6 +29,12 @@
 .opt {
     padding: 10px;
     border-radius: 9px;
+}
+
+#Bcolor {
+    padding: 10px;
+    border-radius: 9px;
+    cursor: pointer;
 }
 
 #color {
@@ -144,6 +154,45 @@ ul li {
 
 @media (max-width:856px) {
 
+
+    #Eraser::before {
+        content: url('/images/eraser.png');
+    }
+
+    #penl::before {
+        content: url('/images/pen.png');
+    }
+
+    #colorl::before {
+        content: url('/images/color.png');
+    }
+
+    #pen {
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+    .opt {
+        padding: 10px;
+        border-radius: 9px;
+    }
+
+    #color {
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+
+    #canvas {
+
+        margin-top: 1px;
+        cursor: url('/images/pen.png'), auto;
+
+
+    }
+
     .navbar-brand {
         font-size: 4em;
         padding: 0 40px;
@@ -205,6 +254,43 @@ ul li {
 @media screen and (max-width:400px) {
 
 
+    #Eraser::before {
+        content: url('/images/eraser.png');
+    }
+
+    #penl::before {
+        content: url('/images/pen.png');
+    }
+
+    #colorl::before {
+        content: url('/images/color.png');
+    }
+
+    #pen {
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+    .opt {
+        padding: 10px;
+        border-radius: 9px;
+    }
+
+    #color {
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+
+    #canvas {
+
+        margin-top: 1px;
+        cursor: url('/images/pen.png'), auto;
+
+
+    }
 
 
     .navbar-brand {
@@ -264,6 +350,44 @@ ul li {
 
 @media (max-width:228px) {
 
+    #Eraser::before {
+        content: url('/images/eraser.png');
+    }
+
+    #penl::before {
+        content: url('/images/pen.png');
+    }
+
+    #colorl::before {
+        content: url('/images/color.png');
+    }
+
+    #pen {
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+    .opt {
+        padding: 10px;
+        border-radius: 9px;
+    }
+
+    #color {
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+
+    #canvas {
+
+        margin-top: 1px;
+        cursor: url('/images/pen.png'), auto;
+
+
+    }
+
     nav {
         width: 100vw;
         height: 12%;
@@ -297,6 +421,44 @@ ul li {
 }
 
 @media (max-width:169px) {
+
+    #Eraser::before {
+        content: url('/images/eraser.png');
+    }
+
+    #penl::before {
+        content: url('/images/pen.png');
+    }
+
+    #colorl::before {
+        content: url('/images/color.png');
+    }
+
+    #pen {
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+    .opt {
+        padding: 10px;
+        border-radius: 9px;
+    }
+
+    #color {
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+
+    #canvas {
+
+        margin-top: 1px;
+        cursor: url('/images/pen.png'), auto;
+
+
+    }
 
     nav {
         width: 100vw;

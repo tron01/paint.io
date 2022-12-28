@@ -3,6 +3,13 @@ const canvas = document.querySelector("#canvas")
 const ctx = canvas.getContext("2d");
 
 
+let box = document.querySelector('#main-content');
+let width = box.offsetWidth;
+let height = box.offsetHeight;
+//Resizing
+canvas.height = height;
+canvas.width = width;
+
 function toImg() {
     // Convert our canvas to a data URL
     let canvasUrl = canvas.toDataURL();
@@ -46,6 +53,41 @@ function Er() {
     ctx.strokeStyle = "white";
 }
 
+function b_color(i) {
+    console.log(i);
+    if (i == 0) {
+        ctx.fillStyle = "00FFFFFF";
+        ctx.fillRect(0, 0, width, height);
+    } else if (i == 1) {
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, width, height);
+    } else if (i == 2) {
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, 0, width, height);
+    } else if (i == 3) {
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, width, height);
+    } else if (i == 4) {
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, width, height);
+    } else if (i == 5) {
+        ctx.fillStyle = "pink";
+        ctx.fillRect(0, 0, width, height);
+    } else if (i == 6) {
+        ctx.fillStyle = "grey";
+        ctx.fillRect(0, 0, width, height);
+    } else if (i == 7) {
+        ctx.fillStyle = "#808000";
+        ctx.fillRect(0, 0, width, height);
+    } else if (i == 8) {
+        ctx.fillStyle = "#FFA500";
+        ctx.fillRect(0, 0, width, height);
+    } else if (i == 8) {
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, width, height);
+    }
+}
+
 function s_color(i) {
     console.log(i);
     if (i == 1) {
@@ -79,8 +121,7 @@ window.addEventListener("load", () => {
     //Resizing
     canvas.height = height;
     canvas.width = width;
-    ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, width, height);
+
 
     //variables
     let painting = false;
