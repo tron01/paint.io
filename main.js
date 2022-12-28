@@ -3,6 +3,20 @@ const canvas = document.querySelector("#canvas")
 const ctx = canvas.getContext("2d");
 
 
+function toImg() {
+    // Convert our canvas to a data URL
+    let canvasUrl = canvas.toDataURL();
+    // Create an anchor, and set the href value to our data URL
+    const createEl = document.createElement('a');
+    createEl.href = canvasUrl;
+
+    // This is the name of our downloaded file
+    createEl.download = "canvas";
+
+    // Click the download button, causing a download, and then remove it
+    createEl.click();
+    createEl.remove();
+}
 function Clear_all() {
     console.log("clicked");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
