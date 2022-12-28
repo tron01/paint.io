@@ -1,18 +1,19 @@
 * {
     margin: 0;
-
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 #Eraser::before {
-    content: url('eraser.png');
+    content: url('/images/eraser.png');
 }
 
 #penl::before {
-    content: url('pen.png');
+    content: url('/images/pen.png');
 }
 
 #colorl::before {
-    content: url('color.png');
+    content: url('/images/color.png');
 }
 
 #pen {
@@ -36,18 +37,14 @@
 #canvas {
 
     margin-top: 1px;
-    cursor: url('pen.png'), auto;
+    cursor: url('/images/pen.png'), auto;
 
 
 }
 
 
 
-* {
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
+
 
 .wrapper {
     width: 100vw;
