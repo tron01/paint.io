@@ -82,7 +82,7 @@ function b_color(i) {
     } else if (i == 8) {
         ctx.fillStyle = "#FFA500";
         ctx.fillRect(0, 0, width, height);
-    } else if (i == 8) {
+    } else if (i == 9) {
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, width, height);
     }
