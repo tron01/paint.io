@@ -5,19 +5,19 @@
 }
 
 #Eraser::before {
-    content: url('/images/eraser.png');
+    content: url('./images/eraser.png');
 }
 
 #penl::before {
-    content: url('/images/pen.png');
+    content: url('./images/pen.png');
 }
 
 #colorl::before {
-    content: url('/images/color.png');
+    content: url('./images/color.png');
 }
 
 #b_color::before {
-    content: url('/images/color.png');
+    content: url('./images/color.png');
 }
 
 #pen {
