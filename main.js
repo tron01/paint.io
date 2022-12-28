@@ -79,6 +79,8 @@ window.addEventListener("load", () => {
     //Resizing
     canvas.height = height;
     canvas.width = width;
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, width, height);
 
     //variables
     let painting = false;
